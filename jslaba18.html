@@ -1,0 +1,79 @@
+<html>
+  <body>
+    <div>Пользователи:</div>
+    <ul>
+      <li>Джон</li>
+      <li>Пит</li>
+    </ul>
+    
+    <table border="1">
+      <tr>
+        <td>1:1</td>
+        <td>1:2</td>
+        <td>1:3</td>
+        <td>1:4</td>
+        <td>1:5</td>
+      </tr>
+      <tr>
+        <td>2:1</td>
+        <td>2:2</td>
+        <td>2:3</td>
+        <td>2:4</td>
+        <td>2:5</td>
+      </tr>
+      <tr>
+        <td>3:1</td>
+        <td>3:2</td>
+        <td>3:3</td>
+        <td>3:4</td>
+        <td>3:5</td>
+      </tr>
+      <tr>
+        <td>4:1</td>
+        <td>4:2</td>
+        <td>4:3</td>
+        <td>4:4</td>
+        <td>4:5</td>
+      </tr>
+      <tr>
+        <td>5:1</td>
+        <td>5:2</td>
+        <td>5:3</td>
+        <td>5:4</td>
+        <td>5:5</td>
+      </tr>
+    </table>
+
+    <script>
+      // Задание 1 - Получение элементов из DOM
+
+      // Получение элемента <div>
+      const divElement = document.querySelector('div');
+      console.log('Div элемент:', divElement);
+
+      // Получение элемента <ul>
+      const ulElement = document.querySelector('ul');
+      console.log('Ul элемент:', ulElement);
+
+      // Получение второго <li> (с именем "Пит")
+      const liElements = document.querySelectorAll('li');
+      const secondLi = liElements[1];  // Индексы начинаются с 0
+      console.log('Второй li (Пит):', secondLi);
+
+      // Задание 2 - Выделение ячеек на диагонали таблицы
+
+      // Получаем все строки таблицы
+      const rows = document.querySelectorAll('table tr');
+
+      // Проходим по строкам и выделяем диагональные ячейки
+      rows.forEach((row, rowIndex) => {
+        // Получаем все ячейки в текущей строке
+        const cells = row.querySelectorAll('td');
+        
+        // Выделяем ячейку на диагонали (где индекс строки равен индексу столбца)
+        const diagonalCell = cells[rowIndex];
+        diagonalCell.style.backgroundColor = 'red';
+      });
+    </script>
+  </body>
+</html>

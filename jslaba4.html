@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Задачи</title>
+</head>
+<body>
+    <h1>JavaScript Задачи</h1>
+
+    <button onclick="task1()">Задача 1: Сумма двух чисел</button>
+    <button onclick="task2()">Задача 2: Сравнение числа и строки</button>
+    <button onclick="task3()">Задача 3: Сравнение булевых значений</button>
+    <button onclick="task3Extended()">Задача 3 (null и undefined)</button>
+    <button onclick="task4()">Задача 4: Сравнение строк с пробелами</button>
+    <button onclick="task5()">Задача 5: Сравнение чисел</button>
+    <button onclick="task6()">Задача 6: Чётное или нечётное число</button>
+    <button onclick="task7()">Задача 7: Сравнение двух чисел</button>
+    <button onclick="task8()">Задача 8: Расчёт скидки</button>
+    <button onclick="task9()">Задача 9: Официальное название JavaScript</button>
+
+    <script>
+        // Задача 1: Сумма двух чисел
+        function task1() {
+            let a = parseFloat(prompt("Введите первое число (a):"));
+            let b = parseFloat(prompt("Введите второе число (b):"));
+
+            let sum = a + b;
+
+            alert(`Сумма чисел ${a} и ${b} равна ${sum}`);
+        }
+
+        // Задача 2: Сравнение числа и строки
+        function task2() {
+            let num = 5;
+            let str = "5";
+
+            alert(`num == str: ${num == str} (нестрогое равенство)\nnum === str: ${num === str} (строгое равенство)`);
+        }
+
+        // Задача 3: Сравнение булевых значений
+        function task3() {
+            alert(`true == 1: ${true == 1}\ntrue === 1: ${true === 1}`);
+        }
+
+        // Задача 3 (null и undefined)
+        function task3Extended() {
+            alert(`null == undefined: ${null == undefined}\nnull === undefined: ${null === undefined}`);
+        }
+
+        // Задача 4: Сравнение строк с пробелами
+        function task4() {
+            let str1 = " hello ";
+            let str2 = "hello";
+
+            alert(`str1 == str2: ${str1 == str2}\nstr1 === str2: ${str1 === str2}`);
+        }
+
+        // Задача 5: Сравнение чисел
+        function task5() {
+            let num1 = 10;
+            let num2 = 10.0;
+
+            alert(`num1 == num2: ${num1 == num2}\nnum1 === num2: ${num1 === num2}`);
+        }
+
+        // Задача 6: Чётное или нечётное число
+        function task6() {
+            let number = parseInt(prompt("Введите число:"));
+
+            if (number % 2 === 0) {
+                alert(`${number} — чётное число.`);
+            } else {
+                alert(`${number} — нечётное число.`);
+            }
+        }
+
+        // Задача 7: Сравнение двух чисел
+        function task7() {
+            let num1 = parseFloat(prompt("Введите первое число:"));
+            let num2 = parseFloat(prompt("Введите второе число:"));
+
+            if (num1 > num2) {
+                alert(`Большее число: ${num1}`);
+            } else if (num1 < num2) {
+                alert(`Большее число: ${num2}`);
+            } else {
+                alert("Числа равны.");
+            }
+        }
+
+        // Задача 8: Расчёт скидки
+        function task8() {
+            let purchaseAmount = parseFloat(prompt("Введите сумму покупки:"));
+            let discount = 0;
+
+            if (purchaseAmount > 1000) {
+                discount = 0.1; // 10% скидка
+            } else if (purchaseAmount >= 500) {
+                discount = 0.05; // 5% скидка
+            }
+
+            let discountedPrice = purchaseAmount * (1 - discount);
+
+            alert(`Итоговая сумма со скидкой: ${discountedPrice.toFixed(2)} (скидка ${discount * 100}%)`);
+        }
+
+        // Задача 9: Официальное название JavaScript
+        function task9() {
+            let userAnswer = prompt("Какое официальное название JavaScript?");
+
+            if (userAnswer.toLowerCase() === "ecmascript") {
+                alert("Верно!");
+            } else {
+                alert("Не знаете? Официальное название JavaScript — ECMAScript!");
+            }
+        }
+    </script>
+</body>
+</html>
